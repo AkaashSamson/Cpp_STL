@@ -151,6 +151,22 @@ void explainStack(){
 
 }
 
+void explainQueue(){
+    queue<int> q;
+    q.push(1); // {1}
+    q.emplace(2); // {1, 2}
+    q.emplace(3); // {1, 2, 3}
+
+    cout << q.front() << endl; // Returns the first element - 1
+    cout << q.back() << endl; // Returns the last element - 3
+
+    q.pop(); // {2, 3}
+
+    cout << q.size() << endl; // Returns the size of the queue - 2
+    // rest operatons pretty smilar to other data structures
+    // empty(), swap()
+}
+
 int main(){
     explainList();
     return 0;

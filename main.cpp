@@ -135,6 +135,22 @@ void explainDeque(){
     //begin(), end(), rbegin(), rend(), size(), clear(), insert(), erase(), swap(), pop_front(), pop_back()
 }
 
+void explainStack(){
+    stack<int> st;
+    st.push(1); // {1}
+    st.emplace(2); // {1, 2}
+    st.emplace(3); // {1, 2, 3}
+
+    cout << st.top() << endl; // Returns the top element - 3
+
+    st.pop(); // {1, 2}
+
+    cout << st.size() << endl; // Returns the size of the stack - 2
+    // rest operatons pretty smilar to other data structures
+    // empty(), swap()
+
+}
+
 int main(){
     explainList();
     return 0;

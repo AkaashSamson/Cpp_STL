@@ -216,6 +216,27 @@ void explainSet(){
     // rest functions same as vector
 }
 
+void explainMultiSet(){
+    //same as set that is it sorts but allows duplicates
+    multiset<int> ms;
+    ms.insert(1); // {1}
+    ms.emplace(2); // {1, 2}
+    ms.emplace(1); // {1, 1, 2}
+
+    int cnt = ms.count(1); // Returns the count of the element in the set - 2
+
+    ms.erase(1); // {1, 2}
+
+    //rest operations same as set
+
+}
+
+void explainUnorderedSet(){
+    unordered_set<int> st;
+    //lower_bound, upper_bound, find, count are not available in unordered set
+    //rest functions same as set, they do not store in sorted order
+}
+
 int main(){
     explainList();
     return 0;

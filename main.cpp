@@ -97,8 +97,25 @@ void explainVector(){
     cout << v.empty() << endl; // Returns a boolean value if the vector is empty or not - 1 if empty, 0 if not
 }
 
+void explainList(){
+    list<int> ls;
+    ls.push_back(1);
+    ls.emplace_back(2);
+
+    ls.push_front(3);
+    ls.emplace_front(4);
+
+    for(auto it: ls){
+        cout << it << " ";
+    }
+    cout << endl;
+
+    //rest functions same as vector
+    //begin(), end(), rbegin(), rend(), size(), clear(), insert(), erase(), swap(), remove(), reverse()
+}
+
 int main(){
-    explainVector();
+    explainList();
     return 0;
 }
 

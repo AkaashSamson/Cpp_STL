@@ -167,6 +167,31 @@ void explainQueue(){
     // empty(), swap()
 }
 
+void explainPriorityQueue(){
+    priority_queue<int> pq; // Max heap
+    pq.push(5);
+    pq.push(1);
+    pq.push(10);
+    pq.push(30);
+    pq.push(20);
+
+    cout << pq.top() << endl; // Returns the top element - 30
+
+    pq.pop(); // Removes the top element
+
+    priority_queue<int, vector<int>, greater<int>> pq1; // Min heap 
+    //in max heap you dont define vector <int> and greater<int>
+    pq1.push(5);
+    pq1.push(1);
+    pq1.push(10);
+    pq1.push(30);
+    pq1.push(20);
+
+    cout << pq1.top() << endl; // Returns the top element - 1
+
+    //push - logn, top - O(1), pop - logn
+}
+
 int main(){
     explainList();
     return 0;
